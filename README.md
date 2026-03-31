@@ -16,4 +16,10 @@
   }
 
 
-  
+
+.header-rule::before, .header-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--sepia-pale), transparent);
+

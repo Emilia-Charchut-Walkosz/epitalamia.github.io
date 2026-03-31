@@ -15,7 +15,11 @@
     position: relative;
   }
 
-
+.header-rule {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
 
 .header-rule::before, .header-rule::after {
     content: '';

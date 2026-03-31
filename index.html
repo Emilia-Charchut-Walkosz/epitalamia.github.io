@@ -66,7 +66,13 @@
     position: relative;
   }
 
-  /* Ornamentalna linia z rombikami */
+    /* Ornamentalna linia z rombikami */
+  .header-rule {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
   .header-rule::before, .header-rule::after {
     content: '';
     flex: 1;
@@ -78,9 +84,8 @@
     font-size: 13px;
     letter-spacing: 10px;
     opacity: 0.7;
-    transform: rotate(-90deg);
   }
-
+ 
   .site-title {
     font-family: 'UnifrakturMaguntia', serif;
     font-size: clamp(28px, 5vw, 56px);
@@ -92,7 +97,7 @@
   .site-title .accent {
     color: var(--crimson);
   }
-
+ 
   .site-subtitle {
     font-family: 'IM Fell English', serif;
     font-style: italic;
@@ -101,7 +106,7 @@
     letter-spacing: 0.16em;
     margin-top: 10px;
   }
-
+ 
   .header-rule-bottom {
     margin-top: 16px;
   }

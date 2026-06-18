@@ -35,932 +35,203 @@
     font-size: 16px;
     min-height: 100vh;
   }
-  .site-header {
-    background: var(--cream);
-    border-bottom: 1px solid var(--cream-border);
-    padding: 0;
-    position: relative;
-  }
-  .site-header::before {
-    content: '';
-    display: block;
-    height: 4px;
-    background: var(--crimson);
-  }
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 36px 48px 28px;
-    text-align: center;
-    position: relative;
-  }
-  .header-rule {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 14px;
-  }
-  .header-rule::before, .header-rule::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--sepia-pale), transparent);
-  }
-  .header-diamond {
-    color: var(--crimson);
-    font-size: 13px;
-    letter-spacing: 10px;
-    opacity: 0.7;
-  }
-  .site-title {
-    font-family: 'UnifrakturMaguntia', serif;
-    font-size: clamp(28px, 5vw, 56px);
-    color: var(--ink);
-    line-height: 1.1;
-    margin-bottom: 4px;
-    letter-spacing: 0.01em;
-  }
+  .site-header { background: var(--cream); border-bottom: 1px solid var(--cream-border); padding: 0; position: relative; }
+  .site-header::before { content: ''; display: block; height: 4px; background: var(--crimson); }
+  .header-inner { max-width: 1200px; margin: 0 auto; padding: 36px 48px 28px; text-align: center; position: relative; }
+  .header-rule { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .header-rule::before, .header-rule::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--sepia-pale), transparent); }
+  .header-diamond { color: var(--crimson); font-size: 13px; letter-spacing: 10px; opacity: 0.7; }
+  .site-title { font-family: 'UnifrakturMaguntia', serif; font-size: clamp(28px, 5vw, 56px); color: var(--ink); line-height: 1.1; margin-bottom: 4px; letter-spacing: 0.01em; }
   .site-title .accent { color: var(--crimson); }
-  .site-subtitle {
-    font-family: 'IM Fell English', serif;
-    font-style: italic;
-    color: var(--sepia);
-    font-size: 14px;
-    letter-spacing: 0.16em;
-    margin-top: 10px;
-  }
+  .site-subtitle { font-family: 'IM Fell English', serif; font-style: italic; color: var(--sepia); font-size: 14px; letter-spacing: 0.16em; margin-top: 10px; }
   .header-rule-bottom { margin-top: 16px; }
-  nav {
-    background: var(--cream-deep);
-    border-bottom: 1px solid var(--cream-border);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-  }
-  .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 0 48px;
-  }
-  nav a {
-    font-family: 'EB Garamond', serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    color: var(--ink-mid);
-    text-decoration: none;
-    padding: 13px 28px;
-    border-right: 1px solid var(--cream-border);
-    transition: color 0.2s, background 0.2s;
-    cursor: pointer;
-    text-transform: uppercase;
-    position: relative;
-  }
+  nav { background: var(--cream-deep); border-bottom: 1px solid var(--cream-border); position: sticky; top: 0; z-index: 50; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; padding: 0 48px; }
+  nav a { font-family: 'EB Garamond', serif; font-size: 11px; font-weight: 400; letter-spacing: 0.18em; color: var(--ink-mid); text-decoration: none; padding: 13px 28px; border-right: 1px solid var(--cream-border); transition: color 0.2s, background 0.2s; cursor: pointer; text-transform: uppercase; position: relative; }
   nav a:first-child { border-left: 1px solid var(--cream-border); }
-  nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--crimson);
-    transform: scaleX(0);
-    transition: transform 0.2s ease;
-  }
+  nav a::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--crimson); transform: scaleX(0); transition: transform 0.2s ease; }
   nav a:hover::after, nav a.active::after { transform: scaleX(1); }
   nav a:hover { color: var(--crimson); background: rgba(139, 26, 26, 0.04); }
   nav a.active { color: var(--crimson); }
-  .main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 44px 48px 60px;
-  }
-  .section-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .section-header h2 {
-    font-family: 'UnifrakturMaguntia', serif;
-    font-size: clamp(22px, 3vw, 34px);
-    color: var(--ink);
-    margin-bottom: 10px;
-    letter-spacing: 0.02em;
-  }
-  .ornamental-rule {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: var(--sepia-pale);
-    font-size: 16px;
-  }
-  .ornamental-rule::before, .ornamental-rule::after {
-    content: '';
-    width: 100px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--sepia-pale), transparent);
-  }
+  .main-container { max-width: 1200px; margin: 0 auto; padding: 44px 48px 60px; }
+  .section-header { text-align: center; margin-bottom: 40px; }
+  .section-header h2 { font-family: 'UnifrakturMaguntia', serif; font-size: clamp(22px, 3vw, 34px); color: var(--ink); margin-bottom: 10px; letter-spacing: 0.02em; }
+  .ornamental-rule { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--sepia-pale); font-size: 16px; }
+  .ornamental-rule::before, .ornamental-rule::after { content: ''; width: 100px; height: 1px; background: linear-gradient(90deg, transparent, var(--sepia-pale), transparent); }
   .orn-mark { color: var(--crimson); opacity: 0.7; }
-  .filter-bar {
-    background: #fff;
-    border: 1px solid var(--cream-border);
-    padding: 22px 28px;
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    box-shadow: 0 2px 10px var(--cream-shadow);
-    position: relative;
-  }
-  .filter-bar::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: var(--crimson);
-  }
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    flex: 1;
-    min-width: 155px;
-  }
-  .filter-group label {
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.16em;
-    color: var(--sepia);
-    text-transform: uppercase;
-  }
-  .filter-group input, .filter-group select {
-    background: var(--cream);
-    border: 1px solid var(--cream-border);
-    color: var(--ink);
-    font-family: 'EB Garamond', serif;
-    font-size: 15px;
-    padding: 8px 12px;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  .filter-group select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238b6a3a'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    padding-right: 32px;
-  }
-  .filter-group input:focus, .filter-group select:focus {
-    border-color: var(--crimson);
-    box-shadow: 0 0 0 2px rgba(139,26,26,0.10);
-  }
-  .btn-search {
-    align-self: flex-end;
-    background: var(--crimson);
-    color: #fff;
-    border: none;
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    padding: 10px 26px;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-transform: uppercase;
-  }
+  .filter-bar { background: #fff; border: 1px solid var(--cream-border); padding: 22px 28px; display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 40px; box-shadow: 0 2px 10px var(--cream-shadow); position: relative; }
+  .filter-bar::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--crimson); }
+  .filter-group { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 155px; }
+  .filter-group label { font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.16em; color: var(--sepia); text-transform: uppercase; }
+  .filter-group input, .filter-group select { background: var(--cream); border: 1px solid var(--cream-border); color: var(--ink); font-family: 'EB Garamond', serif; font-size: 15px; padding: 8px 12px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; appearance: none; -webkit-appearance: none; }
+  .filter-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238b6a3a'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+  .filter-group input:focus, .filter-group select:focus { border-color: var(--crimson); box-shadow: 0 0 0 2px rgba(139,26,26,0.10); }
+  .btn-search { align-self: flex-end; background: var(--crimson); color: #fff; border: none; font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.18em; padding: 10px 26px; cursor: pointer; transition: background 0.2s; text-transform: uppercase; }
   .btn-search:hover { background: var(--crimson-deep); }
-  .prints-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
-    gap: 28px;
-    margin-bottom: 60px;
-  }
-  .print-card {
-    background: #fff;
-    border: 1px solid var(--cream-border);
-    box-shadow: 0 3px 14px var(--shadow-card);
-    transition: transform 0.22s, box-shadow 0.22s;
-    position: relative;
-    overflow: hidden;
-  }
-  .print-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 28px var(--shadow-card);
-  }
-  .card-corner {
-    position: absolute;
-    width: 18px; height: 18px;
-    border-color: var(--sepia-pale);
-    border-style: solid;
-    border-width: 0;
-    z-index: 2;
-  }
+  .prints-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 28px; margin-bottom: 60px; }
+  .print-card { background: #fff; border: 1px solid var(--cream-border); box-shadow: 0 3px 14px var(--shadow-card); transition: transform 0.22s, box-shadow 0.22s; position: relative; overflow: hidden; }
+  .print-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px var(--shadow-card); }
+  .card-corner { position: absolute; width: 18px; height: 18px; border-color: var(--sepia-pale); border-style: solid; border-width: 0; z-index: 2; }
   .card-corner.tl { top: 7px; left: 7px; border-top-width: 1px; border-left-width: 1px; }
   .card-corner.tr { top: 7px; right: 7px; border-top-width: 1px; border-right-width: 1px; }
   .card-corner.bl { bottom: 7px; left: 7px; border-bottom-width: 1px; border-left-width: 1px; }
   .card-corner.br { bottom: 7px; right: 7px; border-bottom-width: 1px; border-right-width: 1px; }
-  .card-image-area {
-    height: 210px;
-    background: var(--cream-deep);
-    overflow: hidden;
-    position: relative;
-    border-bottom: 1px solid var(--cream-border);
-  }
-  .card-image-area img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    opacity: 0.88;
-    filter: sepia(18%);
-    transition: opacity 0.3s, filter 0.3s;
-  }
+  .card-image-area { height: 210px; background: var(--cream-deep); overflow: hidden; position: relative; border-bottom: 1px solid var(--cream-border); }
+  .card-image-area img { width: 100%; height: 100%; object-fit: cover; opacity: 0.88; filter: sepia(18%); transition: opacity 0.3s, filter 0.3s; }
   .print-card:hover .card-image-area img { opacity: 1; filter: sepia(8%); }
-  .card-placeholder {
-    width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--sepia-pale);
-    font-size: 44px;
-    gap: 10px;
-    background: linear-gradient(170deg, var(--cream-deep), #e8dcc0);
-  }
-  .card-placeholder .placeholder-label {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--sepia-light);
-    text-transform: uppercase;
-    opacity: 0.8;
-  }
-  .lang-badge {
-    position: absolute;
-    top: 10px; right: 10px;
-    background: var(--crimson);
-    color: #fff;
-    font-family: 'Cinzel', serif;
-    font-size: 8.5px;
-    letter-spacing: 0.14em;
-    padding: 3px 9px;
-    text-transform: uppercase;
-  }
+  .card-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--sepia-pale); font-size: 44px; gap: 10px; background: linear-gradient(170deg, var(--cream-deep), #e8dcc0); }
+  .card-placeholder .placeholder-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.2em; color: var(--sepia-light); text-transform: uppercase; opacity: 0.8; }
+  .lang-badge { position: absolute; top: 10px; right: 10px; background: var(--crimson); color: #fff; font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 0.14em; padding: 3px 9px; text-transform: uppercase; }
   .card-body { padding: 18px 20px 14px; }
-  .card-title {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 16.5px;
-    color: var(--ink);
-    line-height: 1.35;
-    margin-bottom: 13px;
-  }
+  .card-title { font-family: 'EB Garamond', serif; font-style: italic; font-size: 16.5px; color: var(--ink); line-height: 1.35; margin-bottom: 13px; }
   .card-meta { display: flex; flex-direction: column; gap: 5px; }
   .meta-row { display: flex; gap: 8px; align-items: baseline; font-size: 13.5px; }
-  .meta-label {
-    font-family: 'Cinzel', serif;
-    font-size: 8.5px;
-    letter-spacing: 0.12em;
-    color: var(--sepia);
-    text-transform: uppercase;
-    min-width: 58px;
-  }
+  .meta-label { font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 0.12em; color: var(--sepia); text-transform: uppercase; min-width: 58px; }
   .meta-value { color: var(--ink-mid); font-family: 'EB Garamond', serif; }
-  .card-actions {
-    display: flex;
-    gap: 8px;
-    padding: 11px 20px 16px;
-    border-top: 1px solid var(--cream-deep);
-    flex-wrap: wrap;
-  }
-  .btn-view, .btn-compare, .btn-edit, .btn-delete {
-    flex: 1;
-    padding: 7px 4px;
-    font-family: 'Cinzel', serif;
-    font-size: 8.5px;
-    letter-spacing: 0.16em;
-    border: 1px solid;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.2s;
-  }
-  .btn-view {
-    background: var(--ink);
-    color: var(--cream);
-    border-color: var(--ink);
-  }
+  .card-actions { display: flex; gap: 8px; padding: 11px 20px 16px; border-top: 1px solid var(--cream-deep); flex-wrap: wrap; }
+  .btn-view, .btn-compare, .btn-edit, .btn-delete { flex: 1; padding: 7px 4px; font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 0.16em; border: 1px solid; cursor: pointer; text-transform: uppercase; transition: all 0.2s; }
+  .btn-view { background: var(--ink); color: var(--cream); border-color: var(--ink); }
   .btn-view:hover { background: var(--ink-mid); }
-  .btn-compare {
-    background: transparent;
-    color: var(--sepia);
-    border-color: var(--cream-border);
-  }
+  .btn-compare { background: transparent; color: var(--sepia); border-color: var(--cream-border); }
   .btn-compare:hover { background: var(--cream-deep); color: var(--ink-mid); }
-  .btn-compare.selected {
-    background: var(--crimson);
-    color: #fff;
-    border-color: var(--crimson);
-  }
-  /* NOWE: przyciski Edytuj i Usuń */
-  .btn-edit {
-    background: transparent;
-    color: var(--gold);
-    border-color: var(--sepia-pale);
-    flex: 1;
-  }
+  .btn-compare.selected { background: var(--crimson); color: #fff; border-color: var(--crimson); }
+  .btn-edit { background: transparent; color: var(--gold); border-color: var(--sepia-pale); flex: 1; }
   .btn-edit:hover { background: var(--cream-deep); color: var(--gold); border-color: var(--gold); }
-  .btn-delete {
-    background: transparent;
-    color: var(--crimson-pale);
-    border-color: var(--cream-border);
-    flex: 0 0 auto;
-    padding: 7px 10px;
-  }
+  .btn-delete { background: transparent; color: var(--crimson-pale); border-color: var(--cream-border); flex: 0 0 auto; padding: 7px 10px; }
   .btn-delete:hover { background: var(--crimson); color: #fff; border-color: var(--crimson); }
-  .compare-bar {
-    background: var(--cream-deep);
-    border: 1px solid var(--cream-border);
-    border-left: 3px solid var(--crimson);
-    padding: 12px 20px;
-    display: none;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 32px;
-    box-shadow: 0 2px 8px var(--cream-shadow);
-    flex-wrap: wrap;
-  }
+  .compare-bar { background: var(--cream-deep); border: 1px solid var(--cream-border); border-left: 3px solid var(--crimson); padding: 12px 20px; display: none; align-items: center; gap: 16px; margin-bottom: 32px; box-shadow: 0 2px 8px var(--cream-shadow); flex-wrap: wrap; }
   .compare-bar.visible { display: flex; }
-  .compare-bar-label {
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.16em;
-    color: var(--sepia);
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
+  .compare-bar-label { font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.16em; color: var(--sepia); text-transform: uppercase; white-space: nowrap; }
   .compare-tags { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
-  .compare-tag {
-    background: #fff;
-    border: 1px solid var(--cream-border);
-    color: var(--ink-mid);
-    font-family: 'EB Garamond', serif;
-    font-size: 13px;
-    padding: 4px 10px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .compare-tag button {
-    background: none;
-    border: none;
-    color: var(--sepia-light);
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1;
-    padding: 0;
-  }
+  .compare-tag { background: #fff; border: 1px solid var(--cream-border); color: var(--ink-mid); font-family: 'EB Garamond', serif; font-size: 13px; padding: 4px 10px; display: flex; align-items: center; gap: 7px; }
+  .compare-tag button { background: none; border: none; color: var(--sepia-light); cursor: pointer; font-size: 14px; line-height: 1; padding: 0; }
   .compare-tag button:hover { color: var(--crimson); }
-  .btn-compare-view {
-    background: var(--crimson);
-    color: #fff;
-    border: none;
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.16em;
-    padding: 10px 22px;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
+  .btn-compare-view { background: var(--crimson); color: #fff; border: none; font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.16em; padding: 10px 22px; cursor: pointer; transition: background 0.2s; text-transform: uppercase; white-space: nowrap; }
   .btn-compare-view:hover { background: var(--crimson-deep); }
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10, 7, 3, 0.72);
-    z-index: 100;
-    overflow-y: auto;
-    padding: 40px 20px;
-  }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10, 7, 3, 0.72); z-index: 100; overflow-y: auto; padding: 40px 20px; }
   .modal-overlay.active { display: flex; align-items: flex-start; justify-content: center; }
-  .modal-box {
-    background: var(--cream);
-    border: 1px solid var(--cream-border);
-    max-width: 920px;
-    width: 100%;
-    box-shadow: 0 24px 70px rgba(0,0,0,0.45);
-    position: relative;
-    animation: modalIn 0.28s ease;
-  }
-  @keyframes modalIn {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .modal-header {
-    background: #fff;
-    padding: 18px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--cream-border);
-    border-left: 4px solid var(--crimson);
-  }
-  .modal-title {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    color: var(--ink);
-    font-size: 19px;
-    flex: 1;
-    line-height: 1.3;
-  }
-  .modal-close {
-    background: none;
-    border: 1px solid var(--cream-border);
-    color: var(--sepia);
-    width: 32px; height: 32px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    margin-left: 14px;
-    flex-shrink: 0;
-  }
+  .modal-box { background: var(--cream); border: 1px solid var(--cream-border); max-width: 920px; width: 100%; box-shadow: 0 24px 70px rgba(0,0,0,0.45); position: relative; animation: modalIn 0.28s ease; }
+  @keyframes modalIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .modal-header { background: #fff; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--cream-border); border-left: 4px solid var(--crimson); }
+  .modal-title { font-family: 'EB Garamond', serif; font-style: italic; color: var(--ink); font-size: 19px; flex: 1; line-height: 1.3; }
+  .modal-close { background: none; border: 1px solid var(--cream-border); color: var(--sepia); width: 32px; height: 32px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; margin-left: 14px; flex-shrink: 0; }
   .modal-close:hover { background: var(--crimson); border-color: var(--crimson); color: #fff; }
-  .modal-body {
-    padding: 30px 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
+  .modal-body { padding: 30px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
   @media (max-width: 680px) { .modal-body { grid-template-columns: 1fr; } }
-  .carousel {
-    position: relative;
-    border: 1px solid var(--cream-border);
-    background: var(--cream-deep);
-    aspect-ratio: 3/4;
-    overflow: hidden;
-  }
-  .carousel-track {
-    display: flex;
-    height: 100%;
-    transition: transform 0.38s ease;
-  }
-  .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .carousel-slide img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    filter: sepia(12%);
-  }
-  .placeholder-scan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--sepia-pale);
-    gap: 14px;
-    width: 100%; height: 100%;
-    background: var(--cream-deep);
-  }
+  .carousel { position: relative; border: 1px solid var(--cream-border); background: var(--cream-deep); aspect-ratio: 3/4; overflow: hidden; }
+  .carousel-track { display: flex; height: 100%; transition: transform 0.38s ease; }
+  .carousel-slide { min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+  .carousel-slide img { width: 100%; height: 100%; object-fit: contain; filter: sepia(12%); }
+  .placeholder-scan { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--sepia-pale); gap: 14px; width: 100%; height: 100%; background: var(--cream-deep); }
   .placeholder-scan .scan-icon { font-size: 52px; opacity: 0.45; }
-  .placeholder-scan .scan-num {
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--sepia-light);
-    text-transform: uppercase;
-  }
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.88);
-    border: 1px solid var(--cream-border);
-    color: var(--ink-mid);
-    width: 34px; height: 34px;
-    cursor: pointer;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s, color 0.2s;
-    z-index: 2;
-  }
+  .placeholder-scan .scan-num { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.2em; color: var(--sepia-light); text-transform: uppercase; }
+  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.88); border: 1px solid var(--cream-border); color: var(--ink-mid); width: 34px; height: 34px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: background 0.2s, color 0.2s; z-index: 2; }
   .carousel-btn:hover { background: var(--crimson); color: #fff; border-color: var(--crimson); }
   .carousel-btn.prev { left: 8px; }
   .carousel-btn.next { right: 8px; }
-  .carousel-dots {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-  }
-  .dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--sepia-pale);
-    opacity: 0.6;
-    cursor: pointer;
-    transition: opacity 0.2s, background 0.2s;
-  }
+  .carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sepia-pale); opacity: 0.6; cursor: pointer; transition: opacity 0.2s, background 0.2s; }
   .dot.active { opacity: 1; background: var(--crimson); }
-  .carousel-counter {
-    position: absolute;
-    bottom: 10px; right: 10px;
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.1em;
-    color: var(--sepia);
-  }
-  .metadata-panel h3 {
-    font-family: 'UnifrakturMaguntia', serif;
-    font-size: 20px;
-    color: var(--ink);
-    border-bottom: 1px solid var(--cream-border);
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-  }
-  .meta-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14.5px;
-    margin-bottom: 22px;
-  }
+  .carousel-counter { position: absolute; bottom: 10px; right: 10px; font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.1em; color: var(--sepia); }
+  .metadata-panel h3 { font-family: 'UnifrakturMaguntia', serif; font-size: 20px; color: var(--ink); border-bottom: 1px solid var(--cream-border); padding-bottom: 8px; margin-bottom: 16px; }
+  .meta-table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-bottom: 22px; }
   .meta-table tr { border-bottom: 1px solid var(--cream-deep); }
   .meta-table td { padding: 9px 0; vertical-align: top; }
-  .meta-table td:first-child {
-    font-family: 'Cinzel', serif;
-    font-size: 8.5px;
-    letter-spacing: 0.13em;
-    color: var(--sepia);
-    text-transform: uppercase;
-    width: 110px;
-    padding-right: 12px;
-  }
+  .meta-table td:first-child { font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 0.13em; color: var(--sepia); text-transform: uppercase; width: 110px; padding-right: 12px; }
   .meta-table td:last-child { color: var(--ink-mid); font-family: 'EB Garamond', serif; }
-  .description-block {
-    border-top: 1px solid var(--cream-border);
-    padding-top: 16px;
-    margin-top: 8px;
-  }
-  .description-block h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.18em;
-    color: var(--sepia);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    border: none;
-    padding-bottom: 0;
-  }
-  .description-block p {
-    font-size: 14.5px;
-    color: var(--ink-mid);
-    line-height: 1.75;
-    font-style: italic;
-    font-family: 'EB Garamond', serif;
-  }
-  .compare-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,7,3,0.82);
-    z-index: 200;
-    overflow-y: auto;
-    padding: 30px 20px;
-  }
+  .description-block { border-top: 1px solid var(--cream-border); padding-top: 16px; margin-top: 8px; }
+  .description-block h3 { font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.18em; color: var(--sepia); text-transform: uppercase; margin-bottom: 10px; border: none; padding-bottom: 0; }
+  .description-block p { font-size: 14.5px; color: var(--ink-mid); line-height: 1.75; font-style: italic; font-family: 'EB Garamond', serif; }
+  .compare-modal { display: none; position: fixed; inset: 0; background: rgba(10,7,3,0.82); z-index: 200; overflow-y: auto; padding: 30px 20px; }
   .compare-modal.active { display: block; }
-  .compare-modal-inner {
-    max-width: 1350px;
-    margin: 0 auto;
-    animation: modalIn 0.28s ease;
-  }
-  .compare-header {
-    background: var(--cream);
-    border: 1px solid var(--cream-border);
-    border-left: 4px solid var(--crimson);
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  .compare-header h2 {
-    font-family: 'UnifrakturMaguntia', serif;
-    font-size: 24px;
-    color: var(--ink);
-  }
+  .compare-modal-inner { max-width: 1350px; margin: 0 auto; animation: modalIn 0.28s ease; }
+  .compare-header { background: var(--cream); border: 1px solid var(--cream-border); border-left: 4px solid var(--crimson); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .compare-header h2 { font-family: 'UnifrakturMaguntia', serif; font-size: 24px; color: var(--ink); }
   .compare-panels { display: grid; gap: 18px; }
   .compare-panels.count-2 { grid-template-columns: 1fr 1fr; }
   .compare-panels.count-3 { grid-template-columns: 1fr 1fr 1fr; }
   .compare-panels.count-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .compare-panel { background: var(--cream); border: 1px solid var(--cream-border); overflow: hidden; }
   .compare-panel-header { background: #fff; padding: 10px 14px; border-bottom: 1px solid var(--cream-border); }
-  .compare-panel-header .panel-title {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    color: var(--ink);
-    font-size: 14px;
-    margin-bottom: 2px;
-    line-height: 1.3;
-  }
-  .compare-panel-header .panel-date {
-    font-family: 'Cinzel', serif;
-    font-size: 8.5px;
-    letter-spacing: 0.12em;
-    color: var(--sepia);
-  }
-  .compare-panel-image {
-    height: 340px;
-    background: var(--cream-deep);
-    overflow: hidden;
-    position: relative;
-  }
-  .compare-panel-image img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    filter: sepia(14%);
-    cursor: zoom-in;
-    transition: transform 0.3s;
-  }
+  .compare-panel-header .panel-title { font-family: 'EB Garamond', serif; font-style: italic; color: var(--ink); font-size: 14px; margin-bottom: 2px; line-height: 1.3; }
+  .compare-panel-header .panel-date { font-family: 'Cinzel', serif; font-size: 8.5px; letter-spacing: 0.12em; color: var(--sepia); }
+  .compare-panel-image { height: 340px; background: var(--cream-deep); overflow: hidden; position: relative; }
+  .compare-panel-image img { width: 100%; height: 100%; object-fit: contain; filter: sepia(14%); cursor: zoom-in; transition: transform 0.3s; }
   .compare-panel-image img.zoomed { transform: scale(2); cursor: zoom-out; }
   .compare-panel-image .placeholder-scan { height: 100%; }
   .compare-panel-meta { padding: 12px 14px; display: flex; flex-direction: column; gap: 5px; }
   .compare-meta-row { display: flex; gap: 8px; font-size: 12.5px; }
-  .compare-meta-row .lbl {
-    font-family: 'Cinzel', serif;
-    font-size: 8px;
-    letter-spacing: 0.11em;
-    color: var(--sepia);
-    text-transform: uppercase;
-    min-width: 56px;
-  }
+  .compare-meta-row .lbl { font-family: 'Cinzel', serif; font-size: 8px; letter-spacing: 0.11em; color: var(--sepia); text-transform: uppercase; min-width: 56px; }
   .compare-meta-row .val { color: var(--ink-mid); font-family: 'EB Garamond', serif; }
   #addSection { display: none; }
-  .add-form-section {
-    background: #fff;
-    border: 1px solid var(--cream-border);
-    border-top: 4px solid var(--crimson);
-    padding: 36px;
-    margin-bottom: 60px;
-    box-shadow: 0 3px 14px var(--cream-shadow);
-  }
-  /* NOWE: baner trybu edycji */
-  .edit-mode-banner {
-    display: none;
-    background: #fff8e8;
-    border: 1px solid var(--sepia-pale);
-    border-left: 4px solid var(--gold);
-    padding: 12px 20px;
-    margin-bottom: 24px;
-    font-family: 'EB Garamond', serif;
-    font-size: 14.5px;
-    color: var(--ink-mid);
-    align-items: center;
-    gap: 10px;
-  }
+  .add-form-section { background: #fff; border: 1px solid var(--cream-border); border-top: 4px solid var(--crimson); padding: 36px; margin-bottom: 60px; box-shadow: 0 3px 14px var(--cream-shadow); }
+  .edit-mode-banner { display: none; background: #fff8e8; border: 1px solid var(--sepia-pale); border-left: 4px solid var(--gold); padding: 12px 20px; margin-bottom: 24px; font-family: 'EB Garamond', serif; font-size: 14.5px; color: var(--ink-mid); align-items: center; gap: 10px; }
   .edit-mode-banner.visible { display: flex; }
-  .edit-mode-banner .edit-banner-title {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-right: 8px;
-  }
-  /* NOWE: istniejące skany w trybie edycji */
-  .existing-scans-label {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 0.17em;
-    color: var(--sepia);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    display: block;
-  }
-  .existing-scans {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-    min-height: 0;
-  }
-  .existing-scan-thumb {
-    width: 78px;
-    height: 98px;
-    border: 1px solid var(--cream-border);
-    overflow: hidden;
-    position: relative;
-    background: var(--cream-deep);
-  }
-  .existing-scan-thumb img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    filter: sepia(15%);
-  }
-  .existing-scan-thumb .del-btn {
-    position: absolute;
-    top: 2px; right: 2px;
-    background: var(--crimson);
-    border: none;
-    color: #fff;
-    width: 18px; height: 18px;
-    font-size: 11px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    margin-bottom: 28px;
-  }
+  .edit-mode-banner .edit-banner-title { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; margin-right: 8px; }
+  .existing-scans-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.17em; color: var(--sepia); text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .existing-scans { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; min-height: 0; }
+  .existing-scan-thumb { width: 78px; height: 98px; border: 1px solid var(--cream-border); overflow: hidden; position: relative; background: var(--cream-deep); }
+  .existing-scan-thumb img { width: 100%; height: 100%; object-fit: cover; filter: sepia(15%); }
+  .existing-scan-thumb .del-btn { position: absolute; top: 2px; right: 2px; background: var(--crimson); border: none; color: #fff; width: 18px; height: 18px; font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 28px; }
   @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } }
   .form-group { display: flex; flex-direction: column; gap: 7px; }
   .form-group.full { grid-column: 1 / -1; }
-  .form-group label {
-    font-family: 'Cinzel', serif;
-    font-size: 9px;
-    letter-spacing: 0.17em;
-    color: var(--sepia);
-    text-transform: uppercase;
-  }
-  .form-group input, .form-group select, .form-group textarea {
-    background: var(--cream);
-    border: 1px solid var(--cream-border);
-    color: var(--ink);
-    font-family: 'EB Garamond', serif;
-    font-size: 15px;
-    padding: 9px 13px;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    width: 100%;
-  }
-  .form-group select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238b6a3a'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    padding-right: 32px;
-  }
+  .form-group label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.17em; color: var(--sepia); text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { background: var(--cream); border: 1px solid var(--cream-border); color: var(--ink); font-family: 'EB Garamond', serif; font-size: 15px; padding: 9px 13px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%; }
+  .form-group select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238b6a3a'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
   .form-group textarea { resize: vertical; min-height: 82px; }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    border-color: var(--crimson);
-    box-shadow: 0 0 0 2px rgba(139,26,26,0.09);
-  }
-  .upload-zone {
-    border: 2px dashed var(--cream-border);
-    background: var(--cream);
-    padding: 34px;
-    text-align: center;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
-    position: relative;
-  }
-  .upload-zone:hover, .upload-zone.dragover {
-    border-color: var(--crimson);
-    background: #fff8f8;
-  }
-  .upload-zone input[type="file"] {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    cursor: pointer;
-    width: 100%; height: 100%;
-  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--crimson); box-shadow: 0 0 0 2px rgba(139,26,26,0.09); }
+  .upload-zone { border: 2px dashed var(--cream-border); background: var(--cream); padding: 34px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; position: relative; }
+  .upload-zone:hover, .upload-zone.dragover { border-color: var(--crimson); background: #fff8f8; }
+  .upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
   .upload-zone-icon { font-size: 34px; color: var(--sepia-pale); margin-bottom: 8px; }
-  .upload-zone-text {
-    font-family: 'Cinzel', serif;
-    font-size: 10.5px;
-    letter-spacing: 0.16em;
-    color: var(--sepia);
-    text-transform: uppercase;
-  }
-  .upload-zone-sub {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 13.5px;
-    color: var(--sepia-light);
-    margin-top: 4px;
-  }
+  .upload-zone-text { font-family: 'Cinzel', serif; font-size: 10.5px; letter-spacing: 0.16em; color: var(--sepia); text-transform: uppercase; }
+  .upload-zone-sub { font-family: 'EB Garamond', serif; font-style: italic; font-size: 13.5px; color: var(--sepia-light); margin-top: 4px; }
   .upload-previews { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-  .upload-preview {
-    width: 78px; height: 98px;
-    border: 1px solid var(--cream-border);
-    overflow: hidden;
-    position: relative;
-    background: var(--cream-deep);
-  }
+  .upload-preview { width: 78px; height: 98px; border: 1px solid var(--cream-border); overflow: hidden; position: relative; background: var(--cream-deep); }
   .upload-preview img { width: 100%; height: 100%; object-fit: cover; filter: sepia(15%); }
-  .upload-preview .del-btn {
-    position: absolute;
-    top: 2px; right: 2px;
-    background: var(--crimson);
-    border: none;
-    color: #fff;
-    width: 18px; height: 18px;
-    font-size: 11px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .form-submit-row {
-    display: flex;
-    gap: 12px;
-    justify-content: flex-end;
-    border-top: 1px solid var(--cream-deep);
-    padding-top: 22px;
-  }
-  .btn-cancel {
-    background: transparent;
-    border: 1px solid var(--cream-border);
-    color: var(--sepia);
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.16em;
-    padding: 10px 22px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-transform: uppercase;
-  }
+  .upload-preview .del-btn { position: absolute; top: 2px; right: 2px; background: var(--crimson); border: none; color: #fff; width: 18px; height: 18px; font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .form-submit-row { display: flex; gap: 12px; justify-content: flex-end; border-top: 1px solid var(--cream-deep); padding-top: 22px; }
+  .btn-cancel { background: transparent; border: 1px solid var(--cream-border); color: var(--sepia); font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.16em; padding: 10px 22px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
   .btn-cancel:hover { background: var(--cream-deep); color: var(--ink-mid); }
-  .btn-submit {
-    background: var(--ink);
-    border: 1px solid var(--ink);
-    color: var(--cream);
-    font-family: 'Cinzel', serif;
-    font-size: 9.5px;
-    letter-spacing: 0.2em;
-    padding: 10px 30px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-transform: uppercase;
-  }
+  .btn-submit { background: var(--ink); border: 1px solid var(--ink); color: var(--cream); font-family: 'Cinzel', serif; font-size: 9.5px; letter-spacing: 0.2em; padding: 10px 30px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; }
   .btn-submit:hover { background: var(--ink-mid); }
-  .empty-state {
-    text-align: center;
-    padding: 70px 24px;
-    color: var(--sepia-light);
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 17px;
-    border: 1px dashed var(--cream-border);
-    background: #fff;
-    grid-column: 1 / -1;
-    line-height: 1.8;
-  }
+  .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+  .empty-state { text-align: center; padding: 70px 24px; color: var(--sepia-light); font-family: 'EB Garamond', serif; font-style: italic; font-size: 17px; border: 1px dashed var(--cream-border); background: #fff; grid-column: 1 / -1; line-height: 1.8; }
   .empty-state .empty-icon { font-size: 46px; margin-bottom: 16px; display: block; opacity: 0.35; }
-  .empty-state .empty-hint {
-    display: block;
-    margin-top: 10px;
-    font-family: 'Cinzel', serif;
-    font-style: normal;
-    font-size: 9.5px;
-    letter-spacing: 0.16em;
-    color: var(--sepia-pale);
-    text-transform: uppercase;
-  }
-  footer {
-    background: var(--cream-deep);
-    border-top: 1px solid var(--cream-border);
-    padding: 28px 48px;
-    text-align: center;
-  }
+  .empty-state .empty-hint { display: block; margin-top: 10px; font-family: 'Cinzel', serif; font-style: normal; font-size: 9.5px; letter-spacing: 0.16em; color: var(--sepia-pale); text-transform: uppercase; }
+  /* Wskaźnik ładowania */
+  .loading-overlay { display: none; position: fixed; inset: 0; background: rgba(255,253,246,0.75); z-index: 300; align-items: center; justify-content: center; }
+  .loading-overlay.active { display: flex; }
+  .loading-box { background: #fff; border: 1px solid var(--cream-border); border-top: 3px solid var(--crimson); padding: 28px 40px; text-align: center; box-shadow: 0 8px 32px var(--shadow-card); }
+  .loading-spinner { width: 32px; height: 32px; border: 3px solid var(--cream-border); border-top-color: var(--crimson); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 14px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.18em; color: var(--sepia); text-transform: uppercase; }
+  footer { background: var(--cream-deep); border-top: 1px solid var(--cream-border); padding: 28px 48px; text-align: center; }
   .footer-inner { max-width: 1200px; margin: 0 auto; }
   .footer-ornament { color: var(--crimson); font-size: 18px; margin-bottom: 8px; display: block; opacity: 0.6; }
   footer p { font-family: 'EB Garamond', serif; font-style: italic; font-size: 13.5px; color: var(--sepia); }
-  footer .footer-motto {
-    margin-top: 6px;
-    font-size: 11.5px;
-    letter-spacing: 0.12em;
-    color: var(--sepia-pale);
-    font-style: normal;
-    font-family: 'Cinzel', serif;
-  }
+  footer .footer-motto { margin-top: 6px; font-size: 11.5px; letter-spacing: 0.12em; color: var(--sepia-pale); font-style: normal; font-family: 'Cinzel', serif; }
   @media (max-width: 768px) {
     .main-container { padding: 24px 20px; }
     .header-inner { padding: 26px 24px 20px; }
     nav a { padding: 11px 16px; font-size: 9.5px; letter-spacing: 0.12em; }
-    .compare-panels.count-3,
-    .compare-panels.count-4 { grid-template-columns: 1fr 1fr; }
+    .compare-panels.count-3, .compare-panels.count-4 { grid-template-columns: 1fr 1fr; }
     .add-form-section { padding: 22px; }
   }
 </style>
 </head>
 <body>
+
+<!-- Wskaźnik ładowania -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-box">
+    <div class="loading-spinner"></div>
+    <div class="loading-text" id="loadingText">Zapisywanie…</div>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="header-inner">
     <div class="header-rule"></div>
@@ -971,6 +242,7 @@
     </div>
   </div>
 </header>
+
 <nav>
   <div class="nav-inner">
     <a onclick="showSection('home')" id="nav-home">O katalogu</a>
@@ -979,12 +251,14 @@
     <a onclick="alert('Funkcja w przygotowaniu')">Kontakt</a>
   </div>
 </nav>
+
 <div class="main-container">
   <div class="compare-bar" id="compareBar">
     <span class="compare-bar-label">Porównanie:</span>
     <div class="compare-tags" id="compareTags"></div>
     <button class="btn-compare-view" onclick="openCompareModal()">Porównaj skany ›</button>
   </div>
+
   <!-- O ARCHIWUM -->
   <div id="homeSection" style="display:none;">
     <div class="section-header">
@@ -1000,6 +274,7 @@
       </p>
     </div>
   </div>
+
   <!-- KATALOG -->
   <div id="catalogSection">
     <div class="section-header">
@@ -1039,6 +314,7 @@
     </div>
     <div class="prints-grid" id="printsGrid"></div>
   </div>
+
   <!-- FORMULARZ DODAJ / EDYTUJ -->
   <div id="addSection">
     <div class="section-header">
@@ -1046,13 +322,10 @@
       <div class="ornamental-rule"><span class="orn-mark">❧</span></div>
     </div>
     <div class="add-form-section">
-
-      <!-- BANER TRYBU EDYCJI -->
       <div class="edit-mode-banner" id="editModeBanner">
         <span class="edit-banner-title">✎ Tryb edycji</span>
         <span id="editBannerTitle">—</span>
       </div>
-
       <div class="form-grid">
         <div class="form-group full">
           <label>Tytuł druku *</label>
@@ -1102,7 +375,6 @@
         </div>
         <div class="form-group full">
           <label>Skany (JPG, PNG, WebP)</label>
-          <!-- ISTNIEJĄCE SKANY (widoczne tylko w trybie edycji) -->
           <div id="existingScansArea" style="display:none; margin-bottom:14px;">
             <span class="existing-scans-label">Zapisane skany — kliknij ✕ aby usunąć:</span>
             <div class="existing-scans" id="existingScans"></div>
@@ -1127,7 +399,7 @@
 
 <!-- MODAL: PODGLĄD -->
 <div class="modal-overlay" id="printModal" onclick="closeModal(event)">
-  <div class="modal-box" id="modalBox">
+  <div class="modal-box">
     <div class="modal-header">
       <div class="modal-title" id="modalTitle">—</div>
       <button class="modal-close" onclick="closePrintModal()">✕</button>
@@ -1174,30 +446,106 @@
 </footer>
 
 <script>
-// ─── DATA STORE ────────────────────────────────────────────────────────────────
-const STORAGE_KEY = 'archiwum_drukow_v2';
-let prints = [];
-let compareList = [];
+// ═══════════════════════════════════════════════════════════════════
+// IndexedDB — warstwa dostępu do danych
+// Baza: "EpitalamiDB", wersja 1
+// Object store "prints": klucz = id (string), przechowuje cały obiekt
+//   łącznie ze skanami jako ArrayBuffer (Blob) — bez limitu rozmiaru
+// ═══════════════════════════════════════════════════════════════════
+
+const DB_NAME    = 'EpitalamiDB';
+const DB_VERSION = 1;
+const STORE      = 'prints';
+
+let db = null;
+
+function openDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onupgradeneeded = e => {
+      const database = e.target.result;
+      if (!database.objectStoreNames.contains(STORE)) {
+        database.createObjectStore(STORE, { keyPath: 'id' });
+      }
+    };
+    req.onsuccess = e => resolve(e.target.result);
+    req.onerror   = e => reject(e.target.error);
+  });
+}
+
+// Odczytaj wszystkie rekordy, posortowane od najnowszego
+function dbGetAll() {
+  return new Promise((resolve, reject) => {
+    const tx  = db.transaction(STORE, 'readonly');
+    const req = tx.objectStore(STORE).getAll();
+    req.onsuccess = e => {
+      const rows = e.target.result;
+      // Zachowaj kolejność dodawania (pole addedAt)
+      rows.sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0));
+      resolve(rows);
+    };
+    req.onerror = e => reject(e.target.error);
+  });
+}
+
+// Zapisz lub zaktualizuj jeden rekord
+function dbPut(record) {
+  return new Promise((resolve, reject) => {
+    const tx  = db.transaction(STORE, 'readwrite');
+    const req = tx.objectStore(STORE).put(record);
+    req.onsuccess = () => resolve();
+    req.onerror   = e => reject(e.target.error);
+  });
+}
+
+// Usuń rekord po id
+function dbDelete(id) {
+  return new Promise((resolve, reject) => {
+    const tx  = db.transaction(STORE, 'readwrite');
+    const req = tx.objectStore(STORE).delete(id);
+    req.onsuccess = () => resolve();
+    req.onerror   = e => reject(e.target.error);
+  });
+}
+
+// Konwertuj plik (File) na Blob URL do wyświetlania w img
+// Skany są przechowywane jako base64 string (czytelne przez img src)
+// ale w IndexedDB możemy też trzymać Blob — tutaj zostajemy przy base64
+// bo upraszcza odczyt bez dodatkowych URL.createObjectURL
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload  = e => resolve(e.target.result);
+    reader.onerror = () => reject(new Error('Błąd odczytu pliku'));
+    reader.readAsDataURL(file);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// Stan aplikacji
+// ═══════════════════════════════════════════════════════════════════
+let prints       = [];   // kopia robocza wszystkich rekordów (w pamięci)
+let compareList  = [];
 let carouselIndex = 0;
 let currentModalPrint = null;
-let uploadedFiles = [];
+let uploadedFiles = [];  // base64 nowych skanów oczekujących na zapis
+let editingId    = null;
+let editingScans = [];   // base64 już zapisanych skanów edytowanego rekordu
 
-// Stan edycji: null = tryb dodawania, string = id edytowanego druku
-let editingId = null;
-// Kopie skanów edytowanego druku (można usuwać bez zmiany oryginału do czasu zapisu)
-let editingScans = [];
-
-function loadData() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) prints = JSON.parse(raw);
-  } catch(e) { prints = []; }
+// ═══════════════════════════════════════════════════════════════════
+// Loading overlay
+// ═══════════════════════════════════════════════════════════════════
+function showLoading(text = 'Zapisywanie…') {
+  document.getElementById('loadingText').textContent = text;
+  document.getElementById('loadingOverlay').classList.add('active');
 }
-function saveData() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(prints));
+function hideLoading() {
+  document.getElementById('loadingOverlay').classList.remove('active');
 }
 
-// ─── RENDER ────────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════
+// Render
+// ═══════════════════════════════════════════════════════════════════
 function renderGrid(list) {
   const grid = document.getElementById('printsGrid');
   if (list.length === 0) {
@@ -1248,7 +596,7 @@ function filterPrints() {
   const place = document.getElementById('filterPlace').value.toLowerCase();
   const cent  = document.getElementById('filterCentury').value;
   const filtered = prints.filter(p =>
-    (!q    || p.title.toLowerCase().includes(q) || p.printer.toLowerCase().includes(q)) &&
+    (!q     || p.title.toLowerCase().includes(q) || p.printer.toLowerCase().includes(q)) &&
     (!lang  || p.lang === lang) &&
     (!place || p.place.toLowerCase().includes(place)) &&
     (!cent  || p.century === cent)
@@ -1256,7 +604,9 @@ function filterPrints() {
   renderGrid(filtered);
 }
 
-// ─── SECTIONS ──────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════
+// Sekcje nawigacji
+// ═══════════════════════════════════════════════════════════════════
 function showSection(name) {
   document.getElementById('homeSection').style.display    = name === 'home'    ? 'block' : 'none';
   document.getElementById('catalogSection').style.display = name === 'catalog' ? 'block' : 'none';
@@ -1265,13 +615,14 @@ function showSection(name) {
   document.getElementById('nav-catalog').classList.toggle('active', name === 'catalog');
   document.getElementById('nav-add').classList.toggle('active',     name === 'add');
   if (name === 'catalog') filterPrints();
-  // Przy powrocie do katalogu wyczyść tryb edycji
   if (name !== 'add') resetForm();
 }
 
-// ─── FORMULARZ: RESETOWANIE ────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════
+// Formularz — reset i tryb edycji
+// ═══════════════════════════════════════════════════════════════════
 function resetForm() {
-  editingId = null;
+  editingId    = null;
   editingScans = [];
   uploadedFiles = [];
   ['fTitle','fDate','fPlace','fPrinter','fFormat','fSignature','fDesc']
@@ -1279,11 +630,11 @@ function resetForm() {
   document.getElementById('fLang').value    = 'polski';
   document.getElementById('fCentury').value = 'XV';
   renderPreviews();
-  // Ukryj elementy trybu edycji
   document.getElementById('editModeBanner').classList.remove('visible');
   document.getElementById('existingScansArea').style.display = 'none';
   document.getElementById('formSectionTitle').textContent = 'Dodaj nowy druk';
   document.getElementById('submitBtn').textContent = '✦ Zapisz druk';
+  document.getElementById('submitBtn').disabled = false;
 }
 
 function cancelForm() {
@@ -1291,16 +642,13 @@ function cancelForm() {
   showSection('catalog');
 }
 
-// ─── EDYCJA: OTWIERANIE FORMULARZA ────────────────────────────────────────────
 function openEditForm(id) {
   const p = prints.find(x => x.id === id);
   if (!p) return;
-
   resetForm();
   editingId    = id;
   editingScans = p.scans ? [...p.scans] : [];
 
-  // Wypełnij pola
   document.getElementById('fTitle').value     = p.title     || '';
   document.getElementById('fDate').value      = p.date      || '';
   document.getElementById('fPlace').value     = p.place     || '';
@@ -1311,28 +659,20 @@ function openEditForm(id) {
   document.getElementById('fSignature').value = p.signature || '';
   document.getElementById('fDesc').value      = p.desc      || '';
 
-  // Pokaż baner i tytuł trybu edycji
   document.getElementById('editBannerTitle').textContent = p.title;
   document.getElementById('editModeBanner').classList.add('visible');
   document.getElementById('formSectionTitle').textContent = 'Edytuj druk';
   document.getElementById('submitBtn').textContent = '✦ Zapisz zmiany';
 
-  // Renderuj istniejące skany
   renderExistingScans();
-
   showSection('add');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Renderuj miniatury już zapisanych skanów z możliwością usunięcia
 function renderExistingScans() {
-  const area = document.getElementById('existingScansArea');
+  const area      = document.getElementById('existingScansArea');
   const container = document.getElementById('existingScans');
-
-  if (editingScans.length === 0) {
-    area.style.display = 'none';
-    return;
-  }
+  if (editingScans.length === 0) { area.style.display = 'none'; return; }
   area.style.display = 'block';
   container.innerHTML = editingScans.map((src, i) => `
     <div class="existing-scan-thumb">
@@ -1347,8 +687,10 @@ function removeExistingScan(i) {
   renderExistingScans();
 }
 
-// ─── ZAPIS (dodaj lub zaktualizuj) ────────────────────────────────────────────
-function savePrint() {
+// ═══════════════════════════════════════════════════════════════════
+// Zapis druku (dodaj lub zaktualizuj) — zapis do IndexedDB
+// ═══════════════════════════════════════════════════════════════════
+async function savePrint() {
   const title   = document.getElementById('fTitle').value.trim();
   const date    = document.getElementById('fDate').value.trim();
   const place   = document.getElementById('fPlace').value.trim();
@@ -1359,53 +701,78 @@ function savePrint() {
     return;
   }
 
-  if (editingId) {
-    // ── TRYB EDYCJI: zaktualizuj istniejący wpis ──────────────────────────────
-    const idx = prints.findIndex(p => p.id === editingId);
-    if (idx === -1) return;
-    prints[idx] = {
-      ...prints[idx],           // zachowaj id i ewentualne przyszłe pola
-      title, date, place, printer,
-      lang:      document.getElementById('fLang').value,
-      century:   document.getElementById('fCentury').value,
-      format:    document.getElementById('fFormat').value.trim(),
-      signature: document.getElementById('fSignature').value.trim(),
-      desc:      document.getElementById('fDesc').value.trim(),
-      scans:     [...editingScans, ...uploadedFiles]  // stare (po ewent. usunięciach) + nowe
-    };
-  } else {
-    // ── TRYB DODAWANIA: nowy wpis ──────────────────────────────────────────────
-    prints.unshift({
-      id: 'p' + Date.now(),
-      title, date, place, printer,
-      lang:      document.getElementById('fLang').value,
-      century:   document.getElementById('fCentury').value,
-      format:    document.getElementById('fFormat').value.trim(),
-      signature: document.getElementById('fSignature').value.trim(),
-      desc:      document.getElementById('fDesc').value.trim(),
-      scans:     [...uploadedFiles]
-    });
-  }
+  document.getElementById('submitBtn').disabled = true;
+  showLoading(editingId ? 'Zapisywanie zmian…' : 'Dodawanie druku…');
 
-  saveData();
-  resetForm();
-  showSection('catalog');
+  try {
+    let record;
+    if (editingId) {
+      const existing = prints.find(p => p.id === editingId);
+      record = {
+        ...existing,
+        title, date, place, printer,
+        lang:      document.getElementById('fLang').value,
+        century:   document.getElementById('fCentury').value,
+        format:    document.getElementById('fFormat').value.trim(),
+        signature: document.getElementById('fSignature').value.trim(),
+        desc:      document.getElementById('fDesc').value.trim(),
+        scans:     [...editingScans, ...uploadedFiles]
+      };
+    } else {
+      record = {
+        id:      'p' + Date.now(),
+        addedAt: Date.now(),
+        title, date, place, printer,
+        lang:      document.getElementById('fLang').value,
+        century:   document.getElementById('fCentury').value,
+        format:    document.getElementById('fFormat').value.trim(),
+        signature: document.getElementById('fSignature').value.trim(),
+        desc:      document.getElementById('fDesc').value.trim(),
+        scans:     [...uploadedFiles]
+      };
+    }
+
+    await dbPut(record);
+
+    // Odśwież pamięć podręczną
+    prints = await dbGetAll();
+
+    resetForm();
+    showSection('catalog');
+  } catch (err) {
+    console.error('Błąd zapisu:', err);
+    alert('Wystąpił błąd podczas zapisu: ' + err.message);
+    document.getElementById('submitBtn').disabled = false;
+  } finally {
+    hideLoading();
+  }
 }
 
-// ─── USUWANIE ─────────────────────────────────────────────────────────────────
-function deletePrint(id) {
+// ═══════════════════════════════════════════════════════════════════
+// Usuwanie
+// ═══════════════════════════════════════════════════════════════════
+async function deletePrint(id) {
   const p = prints.find(x => x.id === id);
   if (!p) return;
   if (!confirm(`Czy na pewno chcesz usunąć druk:\n„${p.title}"?\n\nTej operacji nie można cofnąć.`)) return;
-  prints = prints.filter(x => x.id !== id);
-  // Usuń też z listy porównania jeśli był zaznaczony
-  compareList = compareList.filter(x => x.id !== id);
-  updateCompareBar();
-  saveData();
-  filterPrints();
+
+  showLoading('Usuwanie…');
+  try {
+    await dbDelete(id);
+    prints      = await dbGetAll();
+    compareList = compareList.filter(x => x.id !== id);
+    updateCompareBar();
+    filterPrints();
+  } catch (err) {
+    alert('Błąd usuwania: ' + err.message);
+  } finally {
+    hideLoading();
+  }
 }
 
-// ─── MODAL: PODGLĄD ───────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════
+// Modal: podgląd druku
+// ═══════════════════════════════════════════════════════════════════
 function openPrintModal(id) {
   const p = prints.find(x => x.id === id);
   if (!p) return;
@@ -1423,18 +790,17 @@ function openPrintModal(id) {
     : '';
   updateCarouselUI();
   const metaRows = [
-    ['Data publikacji', p.date],
-    ['Miejsce druku', p.place],
-    ['Drukarz / Oficyna', p.printer],
-    ['Język', p.lang],
-    ['Wiek', p.century],
-    p.format    ? ['Format', p.format]       : null,
+    ['Data publikacji',  p.date],
+    ['Miejsce druku',    p.place],
+    ['Drukarz / Oficyna',p.printer],
+    ['Język',            p.lang],
+    ['Wiek',             p.century],
+    p.format    ? ['Format',    p.format]    : null,
     p.signature ? ['Sygnatura', p.signature] : null,
     ['Liczba skanów', (p.scans||[]).length],
   ].filter(Boolean);
   document.getElementById('modalMeta').innerHTML = metaRows
-    .map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`)
-    .join('');
+    .map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
   const descEl = document.getElementById('modalDesc');
   if (p.desc) {
     descEl.style.display = 'block';
@@ -1468,14 +834,15 @@ function updateCarouselUI() {
   document.getElementById('carouselCounter').textContent = len > 1 ? `${carouselIndex+1} / ${len}` : '';
 }
 
-// ─── PORÓWNANIE ────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════════
+// Porównanie
+// ═══════════════════════════════════════════════════════════════════
 function toggleCompare(id) {
   const p = prints.find(x => x.id === id);
   if (!p) return;
   const idx = compareList.findIndex(c => c.id === id);
-  if (idx >= 0) {
-    compareList.splice(idx, 1);
-  } else {
+  if (idx >= 0) { compareList.splice(idx, 1); }
+  else {
     if (compareList.length >= 4) { alert('Możesz porównywać maksymalnie 4 druki.'); return; }
     compareList.push(p);
   }
@@ -1491,8 +858,7 @@ function updateCompareBar() {
     <div class="compare-tag">
       <span>${p.title.substring(0,32)}${p.title.length>32?'…':''}</span>
       <button onclick="toggleCompare('${p.id}')">✕</button>
-    </div>`
-  ).join('');
+    </div>`).join('');
 }
 function openCompareModal() {
   if (compareList.length < 2) { alert('Wybierz co najmniej 2 druki do porównania.'); return; }
@@ -1526,13 +892,20 @@ function closeCompareModal() {
   document.body.style.overflow = '';
 }
 
-// ─── FILE UPLOAD ───────────────────────────────────────────────────────────────
-function handleFileSelect(input) {
-  Array.from(input.files).forEach(f => {
-    const reader = new FileReader();
-    reader.onload = e => { uploadedFiles.push(e.target.result); renderPreviews(); };
-    reader.readAsDataURL(f);
-  });
+// ═══════════════════════════════════════════════════════════════════
+// Upload plików
+// ═══════════════════════════════════════════════════════════════════
+async function handleFileSelect(input) {
+  const files = Array.from(input.files);
+  for (const f of files) {
+    try {
+      const b64 = await fileToBase64(f);
+      uploadedFiles.push(b64);
+    } catch (e) {
+      console.error('Błąd odczytu pliku:', e);
+    }
+  }
+  renderPreviews();
   input.value = '';
 }
 function renderPreviews() {
@@ -1540,8 +913,7 @@ function renderPreviews() {
     <div class="upload-preview">
       <img src="${src}" alt="">
       <button class="del-btn" onclick="removeUpload(${i})">✕</button>
-    </div>`
-  ).join('');
+    </div>`).join('');
 }
 function removeUpload(i) {
   uploadedFiles.splice(i, 1);
@@ -1553,14 +925,32 @@ uz.addEventListener('dragleave', ()  => uz.classList.remove('dragover'));
 uz.addEventListener('drop', e => {
   e.preventDefault();
   uz.classList.remove('dragover');
-  const dt = new DataTransfer();
-  Array.from(e.dataTransfer.files).forEach(f => dt.items.add(f));
-  handleFileSelect({ files: dt.files });
+  handleFileSelect({ files: e.dataTransfer.files, value: '' });
 });
 
-// ─── INIT ──────────────────────────────────────────────────────────────────────
-loadData();
-showSection('catalog');
+// ═══════════════════════════════════════════════════════════════════
+// Inicjalizacja — otwórz IndexedDB, załaduj dane, pokaż katalog
+// ═══════════════════════════════════════════════════════════════════
+async function init() {
+  showLoading('Otwieranie bazy danych…');
+  try {
+    db     = await openDB();
+    prints = await dbGetAll();
+    showSection('catalog');
+  } catch (err) {
+    console.error('Błąd inicjalizacji:', err);
+    document.getElementById('printsGrid').innerHTML = `
+      <div class="empty-state">
+        <span class="empty-icon">⚠</span>
+        Nie udało się otworzyć bazy danych.<br>Sprawdź ustawienia przeglądarki.
+      </div>`;
+    showSection('catalog');
+  } finally {
+    hideLoading();
+  }
+}
+
+init();
 </script>
 </body>
 </html>

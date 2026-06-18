@@ -7,33 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* Paleta: śmietankowa biel dominuje, karmazyn jako akcent, złoto-sepijowe detale */
     --cream:        #fffdf6;
     --cream-deep:   #fbf6eb;
     --cream-border: #ddd0b0;
     --cream-shadow: rgba(80, 55, 20, 0.10);
-
     --ink:          #1c1208;
     --ink-mid:      #3a2810;
     --ink-light:    #5a4025;
-
     --sepia:        #8b6a3a;
     --sepia-light:  #b8915a;
     --sepia-pale:   #d4b882;
-
     --crimson:      #8b1a1a;
     --crimson-deep: #6b1010;
     --crimson-pale: #c05050;
-
     --gold:         #9a7828;
     --gold-light:   #c8a050;
-
     --shadow-card:  rgba(28, 18, 8, 0.13);
     --border:       #c8b090;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     background-color: var(--cream);
     background-image:
@@ -43,15 +35,12 @@
     font-size: 16px;
     min-height: 100vh;
   }
-
-  /* ═══ HEADER ══════════════════════════════════════════════════ */
   .site-header {
     background: var(--cream);
     border-bottom: 1px solid var(--cream-border);
     padding: 0;
     position: relative;
   }
-  /* Subtelna linia u góry w kolorze karmyzynowym */
   .site-header::before {
     content: '';
     display: block;
@@ -65,8 +54,6 @@
     text-align: center;
     position: relative;
   }
-
-    /* Ornamentalna linia z rombikami */
   .header-rule {
     display: flex;
     align-items: center;
@@ -85,7 +72,6 @@
     letter-spacing: 10px;
     opacity: 0.7;
   }
- 
   .site-title {
     font-family: 'UnifrakturMaguntia', serif;
     font-size: clamp(28px, 5vw, 56px);
@@ -94,10 +80,7 @@
     margin-bottom: 4px;
     letter-spacing: 0.01em;
   }
-  .site-title .accent {
-    color: var(--crimson);
-  }
- 
+  .site-title .accent { color: var(--crimson); }
   .site-subtitle {
     font-family: 'IM Fell English', serif;
     font-style: italic;
@@ -106,12 +89,7 @@
     letter-spacing: 0.16em;
     margin-top: 10px;
   }
- 
-  .header-rule-bottom {
-    margin-top: 16px;
-  }
-
-  /* ═══ NAV ══════════════════════════════════════════════════════ */
+  .header-rule-bottom { margin-top: 16px; }
   nav {
     background: var(--cream-deep);
     border-bottom: 1px solid var(--cream-border);
@@ -141,7 +119,6 @@
     position: relative;
   }
   nav a:first-child { border-left: 1px solid var(--cream-border); }
-
   nav a::after {
     content: '';
     position: absolute;
@@ -154,15 +131,11 @@
   nav a:hover::after, nav a.active::after { transform: scaleX(1); }
   nav a:hover { color: var(--crimson); background: rgba(139, 26, 26, 0.04); }
   nav a.active { color: var(--crimson); }
-
-  /* ═══ MAIN ═════════════════════════════════════════════════════ */
   .main-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 44px 48px 60px;
   }
-
-  /* ═══ SECTION HEADER ═══════════════════════════════════════════ */
   .section-header {
     text-align: center;
     margin-bottom: 40px;
@@ -188,12 +161,7 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--sepia-pale), transparent);
   }
-  .orn-mark {
-    color: var(--crimson);
-    opacity: 0.7;
-  }
-
-  /* ═══ FILTER BAR ════════════════════════════════════════════════ */
+  .orn-mark { color: var(--crimson); opacity: 0.7; }
   .filter-bar {
     background: #fff;
     border: 1px solid var(--cream-border);
@@ -205,8 +173,6 @@
     box-shadow: 0 2px 10px var(--cream-shadow);
     position: relative;
   }
-
-  /* Czerwona kreseczka po lewej */
   .filter-bar::before {
     content: '';
     position: absolute;
@@ -214,7 +180,6 @@
     width: 3px;
     background: var(--crimson);
   }
-
   .filter-group {
     display: flex;
     flex-direction: column;
@@ -251,7 +216,6 @@
     border-color: var(--crimson);
     box-shadow: 0 0 0 2px rgba(139,26,26,0.10);
   }
-
   .btn-search {
     align-self: flex-end;
     background: var(--crimson);
@@ -266,15 +230,12 @@
     text-transform: uppercase;
   }
   .btn-search:hover { background: var(--crimson-deep); }
-
-  /* ═══ GRID ══════════════════════════════════════════════════════ */
   .prints-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
     gap: 28px;
     margin-bottom: 60px;
   }
-
   .print-card {
     background: #fff;
     border: 1px solid var(--cream-border);
@@ -287,12 +248,9 @@
     transform: translateY(-4px);
     box-shadow: 0 8px 28px var(--shadow-card);
   }
-
-  /* Złote narożniki */
   .card-corner {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 18px; height: 18px;
     border-color: var(--sepia-pale);
     border-style: solid;
     border-width: 0;
@@ -302,7 +260,6 @@
   .card-corner.tr { top: 7px; right: 7px; border-top-width: 1px; border-right-width: 1px; }
   .card-corner.bl { bottom: 7px; left: 7px; border-bottom-width: 1px; border-left-width: 1px; }
   .card-corner.br { bottom: 7px; right: 7px; border-bottom-width: 1px; border-right-width: 1px; }
-
   .card-image-area {
     height: 210px;
     background: var(--cream-deep);
@@ -311,18 +268,15 @@
     border-bottom: 1px solid var(--cream-border);
   }
   .card-image-area img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     opacity: 0.88;
     filter: sepia(18%);
     transition: opacity 0.3s, filter 0.3s;
   }
   .print-card:hover .card-image-area img { opacity: 1; filter: sepia(8%); }
-
   .card-placeholder {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,11 +294,9 @@
     text-transform: uppercase;
     opacity: 0.8;
   }
-
   .lang-badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 10px; right: 10px;
     background: var(--crimson);
     color: #fff;
     font-family: 'Cinzel', serif;
@@ -353,10 +305,7 @@
     padding: 3px 9px;
     text-transform: uppercase;
   }
-
-  .card-body {
-    padding: 18px 20px 14px;
-  }
+  .card-body { padding: 18px 20px 14px; }
   .card-title {
     font-family: 'EB Garamond', serif;
     font-style: italic;
@@ -365,17 +314,8 @@
     line-height: 1.35;
     margin-bottom: 13px;
   }
-  .card-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .meta-row {
-    display: flex;
-    gap: 8px;
-    align-items: baseline;
-    font-size: 13.5px;
-  }
+  .card-meta { display: flex; flex-direction: column; gap: 5px; }
+  .meta-row { display: flex; gap: 8px; align-items: baseline; font-size: 13.5px; }
   .meta-label {
     font-family: 'Cinzel', serif;
     font-size: 8.5px;
@@ -384,18 +324,15 @@
     text-transform: uppercase;
     min-width: 58px;
   }
-  .meta-value {
-    color: var(--ink-mid);
-    font-family: 'EB Garamond', serif;
-  }
-
+  .meta-value { color: var(--ink-mid); font-family: 'EB Garamond', serif; }
   .card-actions {
     display: flex;
     gap: 8px;
     padding: 11px 20px 16px;
     border-top: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
   }
-  .btn-view, .btn-compare {
+  .btn-view, .btn-compare, .btn-edit, .btn-delete {
     flex: 1;
     padding: 7px 4px;
     font-family: 'Cinzel', serif;
@@ -412,7 +349,6 @@
     border-color: var(--ink);
   }
   .btn-view:hover { background: var(--ink-mid); }
-
   .btn-compare {
     background: transparent;
     color: var(--sepia);
@@ -424,8 +360,22 @@
     color: #fff;
     border-color: var(--crimson);
   }
-
-  /* ═══ COMPARE BAR ═══════════════════════════════════════════════ */
+  /* NOWE: przyciski Edytuj i Usuń */
+  .btn-edit {
+    background: transparent;
+    color: var(--gold);
+    border-color: var(--sepia-pale);
+    flex: 1;
+  }
+  .btn-edit:hover { background: var(--cream-deep); color: var(--gold); border-color: var(--gold); }
+  .btn-delete {
+    background: transparent;
+    color: var(--crimson-pale);
+    border-color: var(--cream-border);
+    flex: 0 0 auto;
+    padding: 7px 10px;
+  }
+  .btn-delete:hover { background: var(--crimson); color: #fff; border-color: var(--crimson); }
   .compare-bar {
     background: var(--cream-deep);
     border: 1px solid var(--cream-border);
@@ -439,7 +389,6 @@
     flex-wrap: wrap;
   }
   .compare-bar.visible { display: flex; }
-
   .compare-bar-label {
     font-family: 'Cinzel', serif;
     font-size: 9.5px;
@@ -448,12 +397,7 @@
     text-transform: uppercase;
     white-space: nowrap;
   }
-  .compare-tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    flex: 1;
-  }
+  .compare-tags { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
   .compare-tag {
     background: #fff;
     border: 1px solid var(--cream-border);
@@ -475,7 +419,6 @@
     padding: 0;
   }
   .compare-tag button:hover { color: var(--crimson); }
-
   .btn-compare-view {
     background: var(--crimson);
     color: #fff;
@@ -490,8 +433,6 @@
     white-space: nowrap;
   }
   .btn-compare-view:hover { background: var(--crimson-deep); }
-
-  /* ═══ MODAL: SINGLE PRINT ════════════════════════════════════════ */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -502,7 +443,6 @@
     padding: 40px 20px;
   }
   .modal-overlay.active { display: flex; align-items: flex-start; justify-content: center; }
-
   .modal-box {
     background: var(--cream);
     border: 1px solid var(--cream-border);
@@ -516,7 +456,6 @@
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
   .modal-header {
     background: #fff;
     padding: 18px 28px;
@@ -538,8 +477,7 @@
     background: none;
     border: 1px solid var(--cream-border);
     color: var(--sepia);
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     cursor: pointer;
     font-size: 16px;
     display: flex;
@@ -550,7 +488,6 @@
     flex-shrink: 0;
   }
   .modal-close:hover { background: var(--crimson); border-color: var(--crimson); color: #fff; }
-
   .modal-body {
     padding: 30px 32px;
     display: grid;
@@ -558,8 +495,6 @@
     gap: 30px;
   }
   @media (max-width: 680px) { .modal-body { grid-template-columns: 1fr; } }
-
-  /* CAROUSEL */
   .carousel {
     position: relative;
     border: 1px solid var(--cream-border);
@@ -580,8 +515,7 @@
     justify-content: center;
   }
   .carousel-slide img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: contain;
     filter: sepia(12%);
   }
@@ -592,8 +526,7 @@
     justify-content: center;
     color: var(--sepia-pale);
     gap: 14px;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     background: var(--cream-deep);
   }
   .placeholder-scan .scan-icon { font-size: 52px; opacity: 0.45; }
@@ -604,7 +537,6 @@
     color: var(--sepia-light);
     text-transform: uppercase;
   }
-
   .carousel-btn {
     position: absolute;
     top: 50%;
@@ -612,8 +544,7 @@
     background: rgba(255,255,255,0.88);
     border: 1px solid var(--cream-border);
     color: var(--ink-mid);
-    width: 34px;
-    height: 34px;
+    width: 34px; height: 34px;
     cursor: pointer;
     font-size: 18px;
     display: flex;
@@ -625,7 +556,6 @@
   .carousel-btn:hover { background: var(--crimson); color: #fff; border-color: var(--crimson); }
   .carousel-btn.prev { left: 8px; }
   .carousel-btn.next { right: 8px; }
-
   .carousel-dots {
     position: absolute;
     bottom: 10px;
@@ -635,8 +565,7 @@
     gap: 6px;
   }
   .dot {
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--sepia-pale);
     opacity: 0.6;
@@ -644,18 +573,14 @@
     transition: opacity 0.2s, background 0.2s;
   }
   .dot.active { opacity: 1; background: var(--crimson); }
-
   .carousel-counter {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 10px; right: 10px;
     font-family: 'Cinzel', serif;
     font-size: 9.5px;
     letter-spacing: 0.1em;
     color: var(--sepia);
   }
-
-  /* METADATA PANEL */
   .metadata-panel h3 {
     font-family: 'UnifrakturMaguntia', serif;
     font-size: 20px;
@@ -664,7 +589,6 @@
     padding-bottom: 8px;
     margin-bottom: 16px;
   }
-
   .meta-table {
     width: 100%;
     border-collapse: collapse;
@@ -682,11 +606,7 @@
     width: 110px;
     padding-right: 12px;
   }
-  .meta-table td:last-child {
-    color: var(--ink-mid);
-    font-family: 'EB Garamond', serif;
-  }
-
+  .meta-table td:last-child { color: var(--ink-mid); font-family: 'EB Garamond', serif; }
   .description-block {
     border-top: 1px solid var(--cream-border);
     padding-top: 16px;
@@ -709,8 +629,6 @@
     font-style: italic;
     font-family: 'EB Garamond', serif;
   }
-
-  /* ═══ COMPARE MODAL ══════════════════════════════════════════════ */
   .compare-modal {
     display: none;
     position: fixed;
@@ -721,13 +639,11 @@
     padding: 30px 20px;
   }
   .compare-modal.active { display: block; }
-
   .compare-modal-inner {
     max-width: 1350px;
     margin: 0 auto;
     animation: modalIn 0.28s ease;
   }
-
   .compare-header {
     background: var(--cream);
     border: 1px solid var(--cream-border);
@@ -743,25 +659,12 @@
     font-size: 24px;
     color: var(--ink);
   }
-
-  .compare-panels {
-    display: grid;
-    gap: 18px;
-  }
+  .compare-panels { display: grid; gap: 18px; }
   .compare-panels.count-2 { grid-template-columns: 1fr 1fr; }
   .compare-panels.count-3 { grid-template-columns: 1fr 1fr 1fr; }
   .compare-panels.count-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
-
-  .compare-panel {
-    background: var(--cream);
-    border: 1px solid var(--cream-border);
-    overflow: hidden;
-  }
-  .compare-panel-header {
-    background: #fff;
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--cream-border);
-  }
+  .compare-panel { background: var(--cream); border: 1px solid var(--cream-border); overflow: hidden; }
+  .compare-panel-header { background: #fff; padding: 10px 14px; border-bottom: 1px solid var(--cream-border); }
   .compare-panel-header .panel-title {
     font-family: 'EB Garamond', serif;
     font-style: italic;
@@ -776,7 +679,6 @@
     letter-spacing: 0.12em;
     color: var(--sepia);
   }
-
   .compare-panel-image {
     height: 340px;
     background: var(--cream-deep);
@@ -784,30 +686,16 @@
     position: relative;
   }
   .compare-panel-image img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: contain;
     filter: sepia(14%);
     cursor: zoom-in;
     transition: transform 0.3s;
   }
-  .compare-panel-image img.zoomed {
-    transform: scale(2);
-    cursor: zoom-out;
-  }
+  .compare-panel-image img.zoomed { transform: scale(2); cursor: zoom-out; }
   .compare-panel-image .placeholder-scan { height: 100%; }
-
-  .compare-panel-meta {
-    padding: 12px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .compare-meta-row {
-    display: flex;
-    gap: 8px;
-    font-size: 12.5px;
-  }
+  .compare-panel-meta { padding: 12px 14px; display: flex; flex-direction: column; gap: 5px; }
+  .compare-meta-row { display: flex; gap: 8px; font-size: 12.5px; }
   .compare-meta-row .lbl {
     font-family: 'Cinzel', serif;
     font-size: 8px;
@@ -816,14 +704,8 @@
     text-transform: uppercase;
     min-width: 56px;
   }
-  .compare-meta-row .val {
-    color: var(--ink-mid);
-    font-family: 'EB Garamond', serif;
-  }
-
-  /* ═══ ADD FORM ═══════════════════════════════════════════════════ */
+  .compare-meta-row .val { color: var(--ink-mid); font-family: 'EB Garamond', serif; }
   #addSection { display: none; }
-
   .add-form-section {
     background: #fff;
     border: 1px solid var(--cream-border);
@@ -832,7 +714,72 @@
     margin-bottom: 60px;
     box-shadow: 0 3px 14px var(--cream-shadow);
   }
-
+  /* NOWE: baner trybu edycji */
+  .edit-mode-banner {
+    display: none;
+    background: #fff8e8;
+    border: 1px solid var(--sepia-pale);
+    border-left: 4px solid var(--gold);
+    padding: 12px 20px;
+    margin-bottom: 24px;
+    font-family: 'EB Garamond', serif;
+    font-size: 14.5px;
+    color: var(--ink-mid);
+    align-items: center;
+    gap: 10px;
+  }
+  .edit-mode-banner.visible { display: flex; }
+  .edit-mode-banner .edit-banner-title {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  /* NOWE: istniejące skany w trybie edycji */
+  .existing-scans-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.17em;
+    color: var(--sepia);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .existing-scans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    min-height: 0;
+  }
+  .existing-scan-thumb {
+    width: 78px;
+    height: 98px;
+    border: 1px solid var(--cream-border);
+    overflow: hidden;
+    position: relative;
+    background: var(--cream-deep);
+  }
+  .existing-scan-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: sepia(15%);
+  }
+  .existing-scan-thumb .del-btn {
+    position: absolute;
+    top: 2px; right: 2px;
+    background: var(--crimson);
+    border: none;
+    color: #fff;
+    width: 18px; height: 18px;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -840,14 +787,8 @@
     margin-bottom: 28px;
   }
   @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-  }
+  .form-group { display: flex; flex-direction: column; gap: 7px; }
   .form-group.full { grid-column: 1 / -1; }
-
   .form-group label {
     font-family: 'Cinzel', serif;
     font-size: 9px;
@@ -879,7 +820,6 @@
     border-color: var(--crimson);
     box-shadow: 0 0 0 2px rgba(139,26,26,0.09);
   }
-
   .upload-zone {
     border: 2px dashed var(--cream-border);
     background: var(--cream);
@@ -898,8 +838,7 @@
     inset: 0;
     opacity: 0;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
   }
   .upload-zone-icon { font-size: 34px; color: var(--sepia-pale); margin-bottom: 8px; }
   .upload-zone-text {
@@ -916,42 +855,28 @@
     color: var(--sepia-light);
     margin-top: 4px;
   }
-
-  .upload-previews {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-  }
+  .upload-previews { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
   .upload-preview {
-    width: 78px;
-    height: 98px;
+    width: 78px; height: 98px;
     border: 1px solid var(--cream-border);
     overflow: hidden;
     position: relative;
     background: var(--cream-deep);
   }
-  .upload-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: sepia(15%);
-  }
+  .upload-preview img { width: 100%; height: 100%; object-fit: cover; filter: sepia(15%); }
   .upload-preview .del-btn {
     position: absolute;
     top: 2px; right: 2px;
     background: var(--crimson);
     border: none;
     color: #fff;
-    width: 18px;
-    height: 18px;
+    width: 18px; height: 18px;
     font-size: 11px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .form-submit-row {
     display: flex;
     gap: 12px;
@@ -972,7 +897,6 @@
     text-transform: uppercase;
   }
   .btn-cancel:hover { background: var(--cream-deep); color: var(--ink-mid); }
-
   .btn-submit {
     background: var(--ink);
     border: 1px solid var(--ink);
@@ -986,8 +910,6 @@
     text-transform: uppercase;
   }
   .btn-submit:hover { background: var(--ink-mid); }
-
-  /* ═══ EMPTY STATE ═══════════════════════════════════════════════ */
   .empty-state {
     text-align: center;
     padding: 70px 24px;
@@ -1000,12 +922,7 @@
     grid-column: 1 / -1;
     line-height: 1.8;
   }
-  .empty-state .empty-icon {
-    font-size: 46px;
-    margin-bottom: 16px;
-    display: block;
-    opacity: 0.35;
-  }
+  .empty-state .empty-icon { font-size: 46px; margin-bottom: 16px; display: block; opacity: 0.35; }
   .empty-state .empty-hint {
     display: block;
     margin-top: 10px;
@@ -1016,8 +933,6 @@
     color: var(--sepia-pale);
     text-transform: uppercase;
   }
-
-  /* ═══ FOOTER ════════════════════════════════════════════════════ */
   footer {
     background: var(--cream-deep);
     border-top: 1px solid var(--cream-border);
@@ -1025,19 +940,8 @@
     text-align: center;
   }
   .footer-inner { max-width: 1200px; margin: 0 auto; }
-  .footer-ornament {
-    color: var(--crimson);
-    font-size: 18px;
-    margin-bottom: 8px;
-    display: block;
-    opacity: 0.6;
-  }
-  footer p {
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 13.5px;
-    color: var(--sepia);
-  }
+  .footer-ornament { color: var(--crimson); font-size: 18px; margin-bottom: 8px; display: block; opacity: 0.6; }
+  footer p { font-family: 'EB Garamond', serif; font-style: italic; font-size: 13.5px; color: var(--sepia); }
   footer .footer-motto {
     margin-top: 6px;
     font-size: 11.5px;
@@ -1046,8 +950,6 @@
     font-style: normal;
     font-family: 'Cinzel', serif;
   }
-
-  /* ═══ RESPONSIVE ════════════════════════════════════════════════ */
   @media (max-width: 768px) {
     .main-container { padding: 24px 20px; }
     .header-inner { padding: 26px 24px 20px; }
@@ -1059,12 +961,9 @@
 </style>
 </head>
 <body>
-
-<!-- ══════════════ HEADER ══════════════ -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="header-rule">
-    </div>
+    <div class="header-rule"></div>
     <div class="site-title"><span class="accent">Katalog</span> Drukowanych Epitalamiów</div>
     <div class="site-subtitle">Bibliotheca Typographica Poloniae Antiquae</div>
     <div class="header-rule header-rule-bottom">
@@ -1072,8 +971,6 @@
     </div>
   </div>
 </header>
-
-<!-- ══════════════ NAV ══════════════ -->
 <nav>
   <div class="nav-inner">
     <a onclick="showSection('home')" id="nav-home">O katalogu</a>
@@ -1082,18 +979,13 @@
     <a onclick="alert('Funkcja w przygotowaniu')">Kontakt</a>
   </div>
 </nav>
-
-<!-- ══════════════ MAIN ══════════════ -->
 <div class="main-container">
-
-  <!-- COMPARE BAR -->
   <div class="compare-bar" id="compareBar">
     <span class="compare-bar-label">Porównanie:</span>
     <div class="compare-tags" id="compareTags"></div>
     <button class="btn-compare-view" onclick="openCompareModal()">Porównaj skany ›</button>
   </div>
-
-  <!-- ══ O ARCHIWUM ══ -->
+  <!-- O ARCHIWUM -->
   <div id="homeSection" style="display:none;">
     <div class="section-header">
       <h2>O Archiwum</h2>
@@ -1108,14 +1000,12 @@
       </p>
     </div>
   </div>
-
-  <!-- ══ CATALOG ══ -->
+  <!-- KATALOG -->
   <div id="catalogSection">
     <div class="section-header">
       <h2>Katalog zbiorów</h2>
       <div class="ornamental-rule"><span class="orn-mark">❧</span></div>
     </div>
-
     <div class="filter-bar">
       <div class="filter-group">
         <label>Wyszukaj tytuł / drukarz</label>
@@ -1147,17 +1037,22 @@
       </div>
       <button class="btn-search" onclick="filterPrints()">Szukaj</button>
     </div>
-
     <div class="prints-grid" id="printsGrid"></div>
   </div>
-
-  <!-- ══ ADD SECTION ══ -->
+  <!-- FORMULARZ DODAJ / EDYTUJ -->
   <div id="addSection">
     <div class="section-header">
-      <h2>Dodaj nowy druk</h2>
+      <h2 id="formSectionTitle">Dodaj nowy druk</h2>
       <div class="ornamental-rule"><span class="orn-mark">❧</span></div>
     </div>
     <div class="add-form-section">
+
+      <!-- BANER TRYBU EDYCJI -->
+      <div class="edit-mode-banner" id="editModeBanner">
+        <span class="edit-banner-title">✎ Tryb edycji</span>
+        <span id="editBannerTitle">—</span>
+      </div>
+
       <div class="form-grid">
         <div class="form-group full">
           <label>Tytuł druku *</label>
@@ -1207,6 +1102,12 @@
         </div>
         <div class="form-group full">
           <label>Skany (JPG, PNG, WebP)</label>
+          <!-- ISTNIEJĄCE SKANY (widoczne tylko w trybie edycji) -->
+          <div id="existingScansArea" style="display:none; margin-bottom:14px;">
+            <span class="existing-scans-label">Zapisane skany — kliknij ✕ aby usunąć:</span>
+            <div class="existing-scans" id="existingScans"></div>
+            <span class="existing-scans-label" style="margin-top:8px;">Dodaj nowe skany:</span>
+          </div>
           <div class="upload-zone" id="uploadZone">
             <input type="file" id="scanUpload" multiple accept="image/*" onchange="handleFileSelect(this)">
             <div class="upload-zone-icon">🖼</div>
@@ -1217,15 +1118,14 @@
         </div>
       </div>
       <div class="form-submit-row">
-        <button class="btn-cancel" onclick="showSection('catalog')">Anuluj</button>
-        <button class="btn-submit" onclick="addPrint()">✦ Zapisz druk</button>
+        <button class="btn-cancel" onclick="cancelForm()">Anuluj</button>
+        <button class="btn-submit" id="submitBtn" onclick="savePrint()">✦ Zapisz druk</button>
       </div>
     </div>
   </div>
+</div>
 
-</div><!-- /main-container -->
-
-<!-- ══════════ MODAL: SINGLE PRINT ══════════ -->
+<!-- MODAL: PODGLĄD -->
 <div class="modal-overlay" id="printModal" onclick="closeModal(event)">
   <div class="modal-box" id="modalBox">
     <div class="modal-header">
@@ -1254,7 +1154,7 @@
   </div>
 </div>
 
-<!-- ══════════ COMPARE MODAL ══════════ -->
+<!-- MODAL: PORÓWNANIE -->
 <div class="compare-modal" id="compareModal">
   <div class="compare-modal-inner">
     <div class="compare-header">
@@ -1265,7 +1165,6 @@
   </div>
 </div>
 
-<!-- ══════════ FOOTER ══════════ -->
 <footer>
   <div class="footer-inner">
     <span class="footer-ornament">❦</span>
@@ -1283,13 +1182,17 @@ let carouselIndex = 0;
 let currentModalPrint = null;
 let uploadedFiles = [];
 
+// Stan edycji: null = tryb dodawania, string = id edytowanego druku
+let editingId = null;
+// Kopie skanów edytowanego druku (można usuwać bez zmiany oryginału do czasu zapisu)
+let editingScans = [];
+
 function loadData() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) prints = JSON.parse(raw);
   } catch(e) { prints = []; }
 }
-
 function saveData() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(prints));
 }
@@ -1328,10 +1231,12 @@ function renderGrid(list) {
           </div>
         </div>
         <div class="card-actions">
-          <button class="btn-view" onclick="openPrintModal('${p.id}')">Przeglądaj</button>
+          <button class="btn-view"    onclick="openPrintModal('${p.id}')">Przeglądaj</button>
+          <button class="btn-edit"    onclick="openEditForm('${p.id}')">✎ Edytuj</button>
           <button class="btn-compare ${inCompare ? 'selected' : ''}" id="cmpbtn-${p.id}" onclick="toggleCompare('${p.id}')">
             ${inCompare ? '✓ Wybrano' : '+ Porównaj'}
           </button>
+          <button class="btn-delete"  onclick="deletePrint('${p.id}')" title="Usuń druk">✕</button>
         </div>
       </div>`;
   }).join('');
@@ -1356,23 +1261,157 @@ function showSection(name) {
   document.getElementById('homeSection').style.display    = name === 'home'    ? 'block' : 'none';
   document.getElementById('catalogSection').style.display = name === 'catalog' ? 'block' : 'none';
   document.getElementById('addSection').style.display     = name === 'add'     ? 'block' : 'none';
-
   document.getElementById('nav-home').classList.toggle('active',    name === 'home');
   document.getElementById('nav-catalog').classList.toggle('active', name === 'catalog');
   document.getElementById('nav-add').classList.toggle('active',     name === 'add');
-
   if (name === 'catalog') filterPrints();
+  // Przy powrocie do katalogu wyczyść tryb edycji
+  if (name !== 'add') resetForm();
 }
 
-// ─── MODAL: SINGLE PRINT ───────────────────────────────────────────────────────
+// ─── FORMULARZ: RESETOWANIE ────────────────────────────────────────────────────
+function resetForm() {
+  editingId = null;
+  editingScans = [];
+  uploadedFiles = [];
+  ['fTitle','fDate','fPlace','fPrinter','fFormat','fSignature','fDesc']
+    .forEach(id => document.getElementById(id).value = '');
+  document.getElementById('fLang').value    = 'polski';
+  document.getElementById('fCentury').value = 'XV';
+  renderPreviews();
+  // Ukryj elementy trybu edycji
+  document.getElementById('editModeBanner').classList.remove('visible');
+  document.getElementById('existingScansArea').style.display = 'none';
+  document.getElementById('formSectionTitle').textContent = 'Dodaj nowy druk';
+  document.getElementById('submitBtn').textContent = '✦ Zapisz druk';
+}
+
+function cancelForm() {
+  resetForm();
+  showSection('catalog');
+}
+
+// ─── EDYCJA: OTWIERANIE FORMULARZA ────────────────────────────────────────────
+function openEditForm(id) {
+  const p = prints.find(x => x.id === id);
+  if (!p) return;
+
+  resetForm();
+  editingId    = id;
+  editingScans = p.scans ? [...p.scans] : [];
+
+  // Wypełnij pola
+  document.getElementById('fTitle').value     = p.title     || '';
+  document.getElementById('fDate').value      = p.date      || '';
+  document.getElementById('fPlace').value     = p.place     || '';
+  document.getElementById('fPrinter').value   = p.printer   || '';
+  document.getElementById('fLang').value      = p.lang      || 'polski';
+  document.getElementById('fCentury').value   = p.century   || 'XV';
+  document.getElementById('fFormat').value    = p.format    || '';
+  document.getElementById('fSignature').value = p.signature || '';
+  document.getElementById('fDesc').value      = p.desc      || '';
+
+  // Pokaż baner i tytuł trybu edycji
+  document.getElementById('editBannerTitle').textContent = p.title;
+  document.getElementById('editModeBanner').classList.add('visible');
+  document.getElementById('formSectionTitle').textContent = 'Edytuj druk';
+  document.getElementById('submitBtn').textContent = '✦ Zapisz zmiany';
+
+  // Renderuj istniejące skany
+  renderExistingScans();
+
+  showSection('add');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Renderuj miniatury już zapisanych skanów z możliwością usunięcia
+function renderExistingScans() {
+  const area = document.getElementById('existingScansArea');
+  const container = document.getElementById('existingScans');
+
+  if (editingScans.length === 0) {
+    area.style.display = 'none';
+    return;
+  }
+  area.style.display = 'block';
+  container.innerHTML = editingScans.map((src, i) => `
+    <div class="existing-scan-thumb">
+      <img src="${src}" alt="Skan ${i+1}">
+      <button class="del-btn" onclick="removeExistingScan(${i})" title="Usuń skan">✕</button>
+    </div>`
+  ).join('');
+}
+
+function removeExistingScan(i) {
+  editingScans.splice(i, 1);
+  renderExistingScans();
+}
+
+// ─── ZAPIS (dodaj lub zaktualizuj) ────────────────────────────────────────────
+function savePrint() {
+  const title   = document.getElementById('fTitle').value.trim();
+  const date    = document.getElementById('fDate').value.trim();
+  const place   = document.getElementById('fPlace').value.trim();
+  const printer = document.getElementById('fPrinter').value.trim();
+
+  if (!title || !date || !place || !printer) {
+    alert('Proszę wypełnić wszystkie wymagane pola (oznaczone *).');
+    return;
+  }
+
+  if (editingId) {
+    // ── TRYB EDYCJI: zaktualizuj istniejący wpis ──────────────────────────────
+    const idx = prints.findIndex(p => p.id === editingId);
+    if (idx === -1) return;
+    prints[idx] = {
+      ...prints[idx],           // zachowaj id i ewentualne przyszłe pola
+      title, date, place, printer,
+      lang:      document.getElementById('fLang').value,
+      century:   document.getElementById('fCentury').value,
+      format:    document.getElementById('fFormat').value.trim(),
+      signature: document.getElementById('fSignature').value.trim(),
+      desc:      document.getElementById('fDesc').value.trim(),
+      scans:     [...editingScans, ...uploadedFiles]  // stare (po ewent. usunięciach) + nowe
+    };
+  } else {
+    // ── TRYB DODAWANIA: nowy wpis ──────────────────────────────────────────────
+    prints.unshift({
+      id: 'p' + Date.now(),
+      title, date, place, printer,
+      lang:      document.getElementById('fLang').value,
+      century:   document.getElementById('fCentury').value,
+      format:    document.getElementById('fFormat').value.trim(),
+      signature: document.getElementById('fSignature').value.trim(),
+      desc:      document.getElementById('fDesc').value.trim(),
+      scans:     [...uploadedFiles]
+    });
+  }
+
+  saveData();
+  resetForm();
+  showSection('catalog');
+}
+
+// ─── USUWANIE ─────────────────────────────────────────────────────────────────
+function deletePrint(id) {
+  const p = prints.find(x => x.id === id);
+  if (!p) return;
+  if (!confirm(`Czy na pewno chcesz usunąć druk:\n„${p.title}"?\n\nTej operacji nie można cofnąć.`)) return;
+  prints = prints.filter(x => x.id !== id);
+  // Usuń też z listy porównania jeśli był zaznaczony
+  compareList = compareList.filter(x => x.id !== id);
+  updateCompareBar();
+  saveData();
+  filterPrints();
+}
+
+// ─── MODAL: PODGLĄD ───────────────────────────────────────────────────────────
 function openPrintModal(id) {
   const p = prints.find(x => x.id === id);
   if (!p) return;
   currentModalPrint = p;
   carouselIndex = 0;
-
   document.getElementById('modalTitle').textContent = p.title;
-
   const scans = p.scans && p.scans.length > 0 ? p.scans : [null];
   document.getElementById('carouselTrack').innerHTML = scans.map((src, i) =>
     src
@@ -1383,7 +1422,6 @@ function openPrintModal(id) {
     ? scans.map((_, i) => `<div class="dot ${i===0?'active':''}" onclick="goToSlide(${i})"></div>`).join('')
     : '';
   updateCarouselUI();
-
   const metaRows = [
     ['Data publikacji', p.date],
     ['Miejsce druku', p.place],
@@ -1394,11 +1432,9 @@ function openPrintModal(id) {
     p.signature ? ['Sygnatura', p.signature] : null,
     ['Liczba skanów', (p.scans||[]).length],
   ].filter(Boolean);
-
   document.getElementById('modalMeta').innerHTML = metaRows
     .map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`)
     .join('');
-
   const descEl = document.getElementById('modalDesc');
   if (p.desc) {
     descEl.style.display = 'block';
@@ -1406,11 +1442,9 @@ function openPrintModal(id) {
   } else {
     descEl.style.display = 'none';
   }
-
   document.getElementById('printModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-
 function closePrintModal() {
   document.getElementById('printModal').classList.remove('active');
   document.body.style.overflow = '';
@@ -1418,7 +1452,6 @@ function closePrintModal() {
 function closeModal(e) {
   if (e.target === document.getElementById('printModal')) closePrintModal();
 }
-
 function carouselMove(dir) {
   if (!currentModalPrint) return;
   const len = currentModalPrint.scans && currentModalPrint.scans.length > 0
@@ -1426,10 +1459,7 @@ function carouselMove(dir) {
   carouselIndex = (carouselIndex + dir + len) % len;
   updateCarouselUI();
 }
-function goToSlide(i) {
-  carouselIndex = i;
-  updateCarouselUI();
-}
+function goToSlide(i) { carouselIndex = i; updateCarouselUI(); }
 function updateCarouselUI() {
   const p   = currentModalPrint;
   const len = p && p.scans && p.scans.length > 0 ? p.scans.length : 1;
@@ -1438,7 +1468,7 @@ function updateCarouselUI() {
   document.getElementById('carouselCounter').textContent = len > 1 ? `${carouselIndex+1} / ${len}` : '';
 }
 
-// ─── COMPARE ───────────────────────────────────────────────────────────────────
+// ─── PORÓWNANIE ────────────────────────────────────────────────────────────────
 function toggleCompare(id) {
   const p = prints.find(x => x.id === id);
   if (!p) return;
@@ -1452,9 +1482,8 @@ function toggleCompare(id) {
   updateCompareBar();
   filterPrints();
 }
-
 function updateCompareBar() {
-  const bar = document.getElementById('compareBar');
+  const bar  = document.getElementById('compareBar');
   const tags = document.getElementById('compareTags');
   if (compareList.length === 0) { bar.classList.remove('visible'); return; }
   bar.classList.add('visible');
@@ -1465,7 +1494,6 @@ function updateCompareBar() {
     </div>`
   ).join('');
 }
-
 function openCompareModal() {
   if (compareList.length < 2) { alert('Wybierz co najmniej 2 druki do porównania.'); return; }
   const panels = document.getElementById('comparePanels');
@@ -1493,7 +1521,6 @@ function openCompareModal() {
   document.getElementById('compareModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-
 function closeCompareModal() {
   document.getElementById('compareModal').classList.remove('active');
   document.body.style.overflow = '';
@@ -1508,7 +1535,6 @@ function handleFileSelect(input) {
   });
   input.value = '';
 }
-
 function renderPreviews() {
   document.getElementById('uploadPreviews').innerHTML = uploadedFiles.map((src,i) => `
     <div class="upload-preview">
@@ -1517,12 +1543,10 @@ function renderPreviews() {
     </div>`
   ).join('');
 }
-
 function removeUpload(i) {
   uploadedFiles.splice(i, 1);
   renderPreviews();
 }
-
 const uz = document.getElementById('uploadZone');
 uz.addEventListener('dragover',  e => { e.preventDefault(); uz.classList.add('dragover'); });
 uz.addEventListener('dragleave', ()  => uz.classList.remove('dragover'));
@@ -1533,34 +1557,6 @@ uz.addEventListener('drop', e => {
   Array.from(e.dataTransfer.files).forEach(f => dt.items.add(f));
   handleFileSelect({ files: dt.files });
 });
-
-// ─── ADD PRINT ─────────────────────────────────────────────────────────────────
-function addPrint() {
-  const title   = document.getElementById('fTitle').value.trim();
-  const date    = document.getElementById('fDate').value.trim();
-  const place   = document.getElementById('fPlace').value.trim();
-  const printer = document.getElementById('fPrinter').value.trim();
-  if (!title || !date || !place || !printer) {
-    alert('Proszę wypełnić wszystkie wymagane pola (oznaczone *).');
-    return;
-  }
-  prints.unshift({
-    id: 'p' + Date.now(),
-    title, date, place, printer,
-    lang:      document.getElementById('fLang').value,
-    century:   document.getElementById('fCentury').value,
-    format:    document.getElementById('fFormat').value.trim(),
-    signature: document.getElementById('fSignature').value.trim(),
-    desc:      document.getElementById('fDesc').value.trim(),
-    scans:     [...uploadedFiles]
-  });
-  saveData();
-  ['fTitle','fDate','fPlace','fPrinter','fFormat','fSignature','fDesc']
-    .forEach(id => document.getElementById(id).value = '');
-  uploadedFiles = [];
-  renderPreviews();
-  showSection('catalog');
-}
 
 // ─── INIT ──────────────────────────────────────────────────────────────────────
 loadData();
